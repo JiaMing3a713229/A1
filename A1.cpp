@@ -1,0 +1,27 @@
+/* 
+題目名稱:作業1
+製作:呂家明 
+修改/完成日期:2019/4/7
+*/
+
+#include<stdio.h>    //導入標頭檔 
+#include<stdlib.h>
+
+int main(void){
+	char name[100];  //建立char陣列 
+	int i=0;         //建立int變數=0 
+	printf("輸入字串");
+	scanf("%s",&name);  //keyin字串 
+	while(i<100&&name[i]>=65){               //大小寫轉換 
+		if(name[i]>=65&&name[i]<=90){  //A-Z
+			name[i]+=32;
+			printf("%c",name[i]);
+		}
+		else if(name[i]>=97&&name[i]<=122){  //a-z
+			name[i]-=32;
+			printf("%c",name[i]);
+		}
+		i++;
+	}
+	
+} 
