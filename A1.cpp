@@ -5,24 +5,23 @@
 */
 
 #include<stdio.h>     //導入標頭檔
-#include<stdlib.h>    
+#include<stdlib.h>
 
-int main(void){
-	char name[100];  //建立char陣列 
-	int i=0;         //建立int變數=0
-	printf("輸入字串");
-	scanf("%s",&name);  //keyin字串
-	while(i<100&&name[i]>=65){               //大小寫轉換
-		if(name[i]>=65&&name[i]<=90){  //A-Z
-			name[i]+=32;
-			printf("%c",name[i]);
-		}
-		else if(name[i]>=97&&name[i]<=122){  //a-z
-			name[i]-=32;
-			printf("%c",name[i]);
-		}
-		i++;
+int main() 
+{
+	char az; //定義顯示的十進位數(字串) 
+	for (az=65; az<=90; az++)  //依序顯示上表65-90 
+	{
+		printf("%c ",az);
 	}
-	return 0;
-	system("pause");
+	
+	printf("\n");  //換行 
+	for (az=97; az<=122; az++) //依序顯示上表97-122  
+	{
+		printf("%c ",az);
+	}
+	printf("\n");//換行 
+	system ("pause"); //暫停 
+	return 0; //回傳值 0 
 }
+
